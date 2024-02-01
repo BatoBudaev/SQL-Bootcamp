@@ -1,1 +1,1 @@
-# SQL-Bootcamp
+# PostgreSQL Bootcamp
