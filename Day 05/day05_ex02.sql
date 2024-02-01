@@ -1,0 +1,9 @@
+DROP INDEX IF EXISTS idx_person_name;
+CREATE INDEX idx_person_name ON person USING btree (UPPER(name));
+
+SET ENABLE_SEQSCAN TO OFF;
+EXPLAIN ANALYSE
+
+SELECT *
+FROM person
+WHERE UPPER(name) IS NOT NULL;
